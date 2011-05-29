@@ -1,6 +1,20 @@
 
-aixi: src/main.o src/agent.o src/search.o src/predict.o src/environment.o src/util.o src/pacman.o src/tictactoe.o src/tiger.o src/kuhnpoker.o src/maze.o src/rock-paper-scissors.o src/extendedtiger.o src/coinflip.o
-	g++ -O3 -Wall -o aixi src/*.o
+PROGRAM = aixi
+CFLAGS = -O3 -Wall
+LDFLAGS =
+
+SOURCES = $(wildcard src/*.cpp)
+OBJECTS = $(SOURCES:.cpp=.o)
+
+$(PROGRAM): $(OBJECTS)
+	g++ $(CFLAGS) $(LDFLAGS) -o $(PROGRAM) $(OBJECTS)
+
+# Include known dependecies from -MMD
+-include $(OBJECTS:.o=.d)
+
+%.o: %.cpp
+	g++ -MMD $(CFLAGS) -o $@ -c $<
+
 
 test-predict-build: aixi tests/test-predict.o
 	g++ -g -o test-predict src/{util,predict}.o tests/test-predict.o
@@ -15,6 +29,6 @@ test-agent: test-agent-build
 	./test-agent
 
 clean:
-	rm -f aixi test-predict src/*.o
+	rm -f $(PROGRAM) test-predict src/*.o src/*.d
 
 
