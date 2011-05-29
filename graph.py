@@ -1,5 +1,6 @@
 import os
 import re
+import sys
 
 import matplotlib.pyplot as plt
 import numpy as np
@@ -12,6 +13,9 @@ def split(s):
 def parse(path):
     lines = open(path).readlines()
     labels = split(lines[0])
+    if "[...]\n" in lines:
+        raise ValueError("abbreviated log")
+
     lines = np.array([split(line) for line in lines[1:]])
     data = dict((label, lines[:, i]) for i, label in enumerate(labels))
 
@@ -121,6 +125,6 @@ for log_file in os.listdir("log"):
         graph_model_size(data)
         save_fig(os.path.join(graph_dir, "model size"))
 
-    except:
-        pass
+    except Exception, e:
+        print >>sys.stderr, "Ignoring %s: %s" % (log_file, e)
 
