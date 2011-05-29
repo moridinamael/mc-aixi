@@ -122,9 +122,9 @@ In order to run the code and have it do something useful, it is necessary to spe
 \subsubsection{Linux}
 Running the agent is as simple as invoking the following command from within the \path{mc-aixi-ctw} directory:
 \begin{lstlisting}[frame=single]
-./aixi conf/4x4-maze.conf log/4x4-maze.log
+./aixi conf/maze-4x4.conf log/maze-4x4.log
 \end{lstlisting}
-In this example, \path{./aixi} refers to the executable we compiled in the previous step, \path{conf/4x4-maze.conf} is  configuration file for the $4 \times 4$ maze environment, and \path{log/4x4-maze.log} is the file to which the agent will log its progress. The agent-environment interaction can be stopped at any time by pressing Ctrl-C (or otherwise stopping the process) or at a particular time using certain configuration options (see section \ref{sec:options}).
+In this example, \path{./aixi} refers to the executable we compiled in the previous step, \path{conf/maze-4x4.conf} is  configuration file for the $4 \times 4$ maze environment, and \path{log/maze-4x4.log} is the file to which the agent will log its progress. The agent-environment interaction can be stopped at any time by pressing Ctrl-C (or otherwise stopping the process) or at a particular time using certain configuration options (see section \ref{sec:options}).
 
 
 \subsubsection{Windows}
@@ -154,7 +154,7 @@ The first argument gives the configuration file for the environment while the se
 
 
 \subsection{Step 5: Visualising the results (Optional)}
-Having run the agent, the results of the agent's interaction are available in the log file \path{log/4x4-maze.log}. The log file is a comma-separated-value (CSV) file with one line per cycle of interaction plus an initial header line. The header line gives the names of the quantities logged to the file while the all the other lines give the corresponding values for a particular cycle. 
+Having run the agent, the results of the agent's interaction are available in the log file \path{log/maze-4x4.log}. The log file is a comma-separated-value (CSV) file with one line per cycle of interaction plus an initial header line. The header line gives the names of the quantities logged to the file while the all the other lines give the corresponding values for a particular cycle. 
 
 Provided with the source code is a graphing utility that enables you to visualise the results. Alternatively, you can use your own selection of tools (e.g.~excel or matlab) to analyse the data. The graphing utility has certain prerequisites in addition to those of the agent, these are detailed in section \ref{sec:prerequisites}. Running the graphing utility is simply a matter of invoking the following command
 \begin{lstlisting}[frame=single]
