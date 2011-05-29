@@ -56,7 +56,6 @@ void mainLoop(Agent &ai, Environment &env, options_t &options) {
 	assert(0 <= terminate_age);
 	
 	// Determine the cycle after which the agent stops learning (if ever)
-	bool stop_learning = options.count("learning-period") > 0;
 	int learning_period = getOption<int>(options, "learning-period", 0);
 	assert(0 <= learning_period);
 
