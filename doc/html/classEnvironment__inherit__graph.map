@@ -1,0 +1,10 @@
+<map id="G" name="G">
+<area shape="rect" href="$classCoinFlip.html" title="CoinFlip" alt="" coords="5,83,72,112"/>
+<area shape="rect" href="$classExtendedTiger.html" title="ExtendedTiger" alt="" coords="96,83,200,112"/>
+<area shape="rect" href="$classKuhnPoker.html" title="KuhnPoker" alt="" coords="224,83,307,112"/>
+<area shape="rect" href="$classMaze.html" title="Maze" alt="" coords="331,83,384,112"/>
+<area shape="rect" href="$classPacMan.html" title="PacMan" alt="" coords="408,83,475,112"/>
+<area shape="rect" href="$classRockPaperScissors.html" title="RockPaperScissors" alt="" coords="499,83,635,112"/>
+<area shape="rect" href="$classTicTacToe.html" title="TicTacToe" alt="" coords="659,83,739,112"/>
+<area shape="rect" href="$classTiger.html" title="Tiger" alt="" coords="763,83,813,112"/>
+</map>

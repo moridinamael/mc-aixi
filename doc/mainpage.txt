@@ -1,0 +1,60 @@
+/*! \mainpage MC-AIXI-CTW
+ *
+ * The <a href="http://jair.org/papers/paper3125.html">Monte-Carlo AIXI
+ * agent (Veness et al.)</a> is an approximation of the universally optimal <a
+ * href="http://www.hutter1.net/ai/uaibook.htm">AIXI</a> reinforcment learning
+ * agent. The purpose of this software package is to provide a simple
+ * implementation of the basic MC-AIXI-CTW agent. For a more heavy-weight
+ * implementation, see <a href="http://jveness.info/software/default.html">
+ * Joel Veness' code</a> from which this simpler version is derived. Similarly,
+ * the current documentation and associated tutorial gives a very brief and
+ * mostly non-technical overview of the MC-AIXI-CTW agent. For a thorough and
+ * formal treatment we recommend the
+ * <a href="http://jair.org/papers/paper3125.html">original paper</a>.
+ *
+ * The MC-AIXI-CTW agent seeks to interact intelligently within a particular
+ * environment. The environment can be just about anything, from a chess game to
+ * the entire universe. The agent interacts with the environment by performing
+ * actions (such as moving a piece on a chess board) and the environment
+ * interacts with the agent by providing observations (such as an image from a
+ * camera) and rewards for the agents actions. It is the goal of the agent to
+ * use its past interaction history to learn how to choose the actions which
+ * will lead to the greatest long-term reward. 
+ *
+ * There are two main components which combine to give the agent’s action
+ * selection policy. The first is a model of the environment with which the agent
+ * attempts to model how the environment works and hence to predict how likely
+ * any given outcome is. Second is an algorithm for estimating the expected
+ * reward of each possible action by using the probabilities associated with the 
+ * environment model. In particular, the MC-AIXI-CTW agent uses context-tree
+ * weighting for the environment model and the \f$ \rho \f$UCT search algorithm for
+ * estimating the expected rewards.
+ *
+ * The software is divided into several components, each of which corresponds
+ * roughly with some component of the agent.
+ * - The main.cpp file contains the code which sets up and runs the
+ *   agent/environment interaction loop.
+ * - High-level control of the agent is controlled by the Agent class with the
+ *   the details of the environment model and action selection handled other
+ *   classes as follows:
+ *   - The agent's environment model is implemented by the ContextTree and
+ *     CTNode classes. The class ModelUndo is used to store the information
+ *     required in order to return the environment model to a previous state.
+ *   - The \f$ \rho \f$UCT search algorithm is implemented in part by the
+ *     SearchNode class and in part by the Agent class.
+ * - Each environment inherits from the Environment class. The currently
+ *   implemented environments include:
+ *   - CoinFlip
+ *   - ExtendedTiger
+ *   - KuhnPoker
+ *   - Maze
+ *   - PacMan
+ *   - RockPaperScissors
+ *   - TicTacToe
+ *   - Tiger
+ * - Miscellaneous utility functions are contained in util.cpp and util.hpp.
+ *
+ * For more details on the code including how to run, configure, log, or make
+ * changes please see the accompanying tutorial (in the tutorial subfolder of
+ * the MC-AIXI-CTW package).
+ */

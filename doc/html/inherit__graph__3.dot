@@ -1,0 +1,25 @@
+digraph G
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir=LR;
+  Node1 [label="Environment",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classEnvironment.html"];
+  Node1 -> Node2 [dir=back,color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node2 [label="CoinFlip",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classCoinFlip.html"];
+  Node1 -> Node3 [dir=back,color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node3 [label="ExtendedTiger",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classExtendedTiger.html"];
+  Node1 -> Node4 [dir=back,color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node4 [label="KuhnPoker",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classKuhnPoker.html"];
+  Node1 -> Node5 [dir=back,color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node5 [label="Maze",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classMaze.html"];
+  Node1 -> Node6 [dir=back,color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node6 [label="PacMan",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classPacMan.html"];
+  Node1 -> Node7 [dir=back,color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node7 [label="RelayMaze",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classRelayMaze.html"];
+  Node1 -> Node8 [dir=back,color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node8 [label="RockPaperScissors",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classRockPaperScissors.html"];
+  Node1 -> Node9 [dir=back,color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node9 [label="TicTacToe",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classTicTacToe.html"];
+  Node1 -> Node10 [dir=back,color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node10 [label="Tiger",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classTiger.html"];
+}

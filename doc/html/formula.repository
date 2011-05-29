@@ -1,0 +1,37 @@
+\form#0:$\ln(0.5)$
+\form#1:$ n $
+\form#2:$ n0 $
+\form#3:$ n1 $
+\form#4:$ h_n $
+\form#5:$ a $
+\form#6:$ b $
+\form#7:\[ P_w^n(h_n) := \begin{cases} \Pr_\text{kt}(h_n) & \text{if } n \text{ is a leaf node} \\ \frac{1}{2} \Pr_\text{kt}(h_n) + \frac{1}{2} P_w^{n0}(h_{n0}) P_w^{n1}(h_{n1}) & \text{otherwise} \end{cases} \]
+\form#8:$ \Pr_\text{kt}(h_n) = \Pr_\text{kt}(a, b) $
+\form#9:\[ \Pr_\text{kt}(a + 1, b) = \frac{a + 1/2}{a + b + 1} \Pr_\text{kt}(a, b) \]
+\form#10:\[ \Pr_\text{kt}(a, b + 1) = \frac{b + 1/2}{a + b + 1} \Pr_\text{kt}(a, b) \]
+\form#11:$ \Pr_\text{kt}(0, 0) := 1 $
+\form#12:$ \ln P_w^n(h_n) $
+\form#13:$ \ln \Pr_\text{kt}(h_n) $
+\form#14:$ \ln \Pr_{kt} (h_{T, n}) = \ln \Pr_{kt}(0^a 1^b) = \ln \Pr_{kt}(a, b) $
+\form#15:$ h_{T, n} $
+\form#16:$ \ln P_w^n $
+\form#17:\[ \ln \Pr_\text{kt}(0 \,|\, 0^a1^b) = \ln \frac{a + 1/2}{a + b + 1}. \]
+\form#18:\[ \ln \Pr_\text{kt}(1 \,|\, 0^a1^b) = \ln \frac{b + 1/2}{a + b + 1}. \]
+\form#19:$ \ln \Pr_\text{kt}(0 \,|\, 0^a1^b) $
+\form#20:$ \ln \Pr_\text{kt}(1 \,|\, 0^a1^b) $
+\form#21:\[ \ln P^n_w := \begin{cases} \ln \Pr_\text{KT}(h_n) & \text{if } n \text{ is a leaf node} \\ \ln \left( \frac{1}{2} \Pr_\text{KT}(h_n) + \frac{1}{2} P^{n^0}_w \times P^{n^1}_w \right) & \text{otherwise} \end{cases} \]
+\form#22:$ \ln \Pr_\text{KT}(h_n) $
+\form#23:$ \ln P_w^{n^0} $
+\form#24:$ \ln P_w^{n^1} $
+\form#25:\[ \ln (a + b) = \ln a + \ln( 1 + \exp( \ln b - \ln a ) ) \qquad a,b > 0 \]
+\form#26:\[ \ln \left( \frac{1}{2} \Pr_\text{KT}(h_n) + \frac{1}{2} P_w^{n0} P_w^{n1} \right) = \begin{cases} \ln (1/2) + \ln \Pr_\text{KT}(h_n) + \ln \left( 1 + \exp \left( \ln P_w^{n0} + \ln P_w^{n1} - \ln \Pr_\text{KT}(h_n) \right) \right) \\ \ln (1/2) + \ln P_w^{n0} + \ln P_w^{n1} + \ln \left( 1 + \exp \left( \ln \Pr_\text{KT}(h_n) - \ln P_w^{n0} + \ln P_w^{n1} \right) \right) \end{cases}. \]
+\form#27:$ \exp(\ln b - \ln a) $
+\form#28:$ h $
+\form#29:$ y $
+\form#30:\[ \rho(y | h) = \frac{\rho(hy)}{\rho(h)} \]
+\form#31:$ \rho(h) = P_w^\epsilon(h) $
+\form#32:$ \epsilon $
+\form#33:$ \rho(0 | h) $
+\form#34:$ \rho(1 | h) $
+\form#35:$ \rho(y | h) $
+\form#36:$ \rho $
